@@ -8,6 +8,8 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
+          "inlineTemplate": true,
+          "inlineStyle": true,
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -87,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "laern-new-way:build:production"
+              "buildTarget": "laern-new-way:build:production"
             },
             "development": {
-              "browserTarget": "laern-new-way:build:development"
+              "buildTarget": "laern-new-way:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "laern-new-way:build"
+            "buildTarget": "laern-new-way:build"
           }
         },
         "test": {
