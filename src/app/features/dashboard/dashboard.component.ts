@@ -7,7 +7,7 @@ import {
   signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { User } from '@angular/fire/auth';
 
 @Component({
@@ -16,7 +16,7 @@ import { User } from '@angular/fire/auth';
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="card bg-base-200 shadow-xl w-full m-10">
+    <div class="card bg-base-200 shadow-xl w-full">
       <div class="stats shadow">
         <div class="stat">
           <div class="stat-figure text-primary">

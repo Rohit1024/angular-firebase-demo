@@ -1,5 +1,6 @@
+import { InputErrorsComponent } from '@/app/components/input-errors.component';
 import { CrudService, Task } from '@/app/services/crud.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, TitleCasePipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -18,7 +19,7 @@ import {
 @Component({
   standalone: true,
   selector: 'task-add',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, InputErrorsComponent, TitleCasePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <dialog #add_modal class="modal">
@@ -48,13 +49,10 @@ import {
               class="input input-bordered"
               formControlName="title"
             />
-            @if(addTasksForm.get('title')?.hasError){
-            <div class="label">
-              @if(handleError('title', 'required')){
-              <span class="label-text-alt text-error">Title is Required</span>
-              }
-            </div>
-            }
+            <input-error-messages
+              [control]="addTasksForm.get('title')!"
+              errorMessageKeyName="text"
+            />
           </label>
           <label class="form-control">
             <div class="label">
@@ -66,13 +64,10 @@ import {
               <option [value]="state">{{ state | titlecase }}</option>
               }
             </select>
-            @if(addTasksForm.get('status')?.hasError){
-            <div class="label">
-              @if(handleError('status', 'required')){
-              <span class="label-text-alt text-error">Status is Required</span>
-              }
-            </div>
-            }
+            <input-error-messages
+              [control]="addTasksForm.get('status')!"
+              errorMessageKeyName="select"
+            />
           </label>
           <label class="form-control">
             <div class="label">
@@ -84,13 +79,10 @@ import {
               <option [value]="lab">{{ lab | titlecase }}</option>
               }
             </select>
-            @if(addTasksForm.get('label')?.hasError){
-            <div class="label">
-              @if(handleError('label', 'required')){
-              <span class="label-text-alt text-error">Label is Required</span>
-              }
-            </div>
-            }
+            <input-error-messages
+              [control]="addTasksForm.get('label')!"
+              errorMessageKeyName="select"
+            />
           </label>
           <label class="form-control">
             <div class="label">
@@ -102,15 +94,10 @@ import {
               <option [value]="prior">{{ prior | titlecase }}</option>
               }
             </select>
-            @if(addTasksForm.get('priority')?.hasError){
-            <div class="label">
-              @if(handleError('priority', 'required')){
-              <span class="label-text-alt text-error"
-                >Priority is Required</span
-              >
-              }
-            </div>
-            }
+            <input-error-messages
+              [control]="addTasksForm.get('priority')!"
+              errorMessageKeyName="select"
+            />
           </label>
           <label class="form-control">
             <div class="label">
@@ -122,15 +109,10 @@ import {
               formControlName="due_date"
               (change)="formateDate($event)"
             />
-            @if(addTasksForm.get('due_date')?.hasError){
-            <div class="label">
-              @if(handleError('due_date', 'required')){
-              <span class="label-text-alt text-error"
-                >Due Date is Required</span
-              >
-              }
-            </div>
-            }
+            <input-error-messages
+              [control]="addTasksForm.get('due_date')!"
+              errorMessageKeyName="date"
+            />
           </label>
           <div class="flex gap-2 items-center justify-between mt-4">
             <button class="btn btn-primary flex-1" type="submit">

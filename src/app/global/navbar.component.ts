@@ -26,13 +26,14 @@ import { UserNavComponent } from './micro-components/user-nav.component';
       <div class="navbar-start">
         <a
           class="btn btn-ghost text-xl"
-          routerLink="/"
+          routerLink="/home"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
         >
           Angular Firebase Demo</a
         >
       </div>
+      <div class="navbar-center"></div>
       <div class="navbar-end">
         <div class="dropdown dropdown-end">
           <div tabindex="0" role="button" class="btn m-1 btn-sm btn-ghost">

@@ -6,9 +6,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faRightFromBracket,
   faUser,
-  faDashboard,
   faTasks,
-  faBuilding,
+  faBorderAll,
+  faBuildingColumns,
 } from '@fortawesome/free-solid-svg-icons';
 import { HotToastService } from '@ngneat/hot-toast';
 
@@ -30,13 +30,13 @@ import { HotToastService } from '@ngneat/hot-toast';
       </div>
       <ul
         tabindex="5"
-        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64"
+        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-64 space-y-1"
       >
         <li>
           <a
             class="flex"
             title="View profile"
-            routerLink="/user/profile"
+            routerLink="/profile"
             routerLinkActive="active"
           >
             <img
@@ -54,7 +54,7 @@ import { HotToastService } from '@ngneat/hot-toast';
         <div class="divider my-0"></div>
         <li>
           <a
-            routerLink="/user"
+            routerLink="/dashboard"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
           >
@@ -64,7 +64,7 @@ import { HotToastService } from '@ngneat/hot-toast';
         </li>
         <li>
           <a
-            routerLink="/user/tasks"
+            routerLink="/tasks"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
           >
@@ -99,9 +99,9 @@ export class UserNavComponent {
   //Icons
   faLogout = faRightFromBracket;
   faUser = faUser;
-  faDash = faDashboard;
+  faDash = faBorderAll;
   faTasks = faTasks;
-  faOrg = faBuilding;
+  faOrg = faBuildingColumns;
 
   logout() {
     this.authService

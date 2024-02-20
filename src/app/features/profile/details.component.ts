@@ -71,7 +71,7 @@ import { HotToastService } from '@ngneat/hot-toast';
           <div class="label">
             <a
               class="btn btn-ghost btn-sm label-text-alt"
-              routerLink="/user/profile/email"
+              routerLink="/profile/email"
               >Update Email Address ?</a
             >
           </div>

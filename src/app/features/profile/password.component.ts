@@ -1,4 +1,4 @@
-import Validation from '@/app/auth/register/validation';
+import Validation from '@/app/features/auth/register/validation';
 import { InputErrorsComponent } from '@/app/components/input-errors.component';
 import { AuthService } from '@/app/services/auth.service';
 import { CommonModule } from '@angular/common';

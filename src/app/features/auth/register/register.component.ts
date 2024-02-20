@@ -176,7 +176,7 @@ export class RegisterComponent {
         })
       )
       .subscribe({
-        next: () => this.router.navigate(['/']),
+        next: () => this.router.navigate(['/dashboard']),
         error: ({ code }) => this.toast.error(`Error : ${code}`),
       });
   }
@@ -192,7 +192,7 @@ export class RegisterComponent {
         })
       )
       .subscribe({
-        next: () => this.router.navigate(['/']),
+        next: () => this.router.navigate(['/dashboard']),
         error: ({ code }) => this.toast.error(`Error : ${code}`),
       });
   }

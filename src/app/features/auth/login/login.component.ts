@@ -149,7 +149,7 @@ export class LoginComponent {
         })
       )
       .subscribe({
-        next: () => this.router.navigate(['/']),
+        next: () => this.router.navigate(['/dashboard']),
         error: ({ code }) => this.toast.error(`Error : ${code}`),
       });
   }
@@ -173,7 +173,7 @@ export class LoginComponent {
         })
       )
       .subscribe({
-        next: () => this.router.navigate(['/']),
+        next: () => this.router.navigate(['/dashboard']),
         error: ({ code }) => this.toast.error(`Error : ${code}`),
       });
   }

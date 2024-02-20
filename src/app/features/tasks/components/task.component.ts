@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Task } from '@/app/services/crud.service';
 import { CommonModule } from '@angular/common';
-import { EditTaskComponent } from '@/app/user/components/modals/edit-task.component';
-import { DeleteTaskComponent } from '@/app/user/components/modals/delete-task.component';
+import { EditTaskComponent } from '@/app/features/tasks/components/modals/edit-task.component';
+import { DeleteTaskComponent } from '@/app/features/tasks/components/modals/delete-task.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faEye,

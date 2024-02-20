@@ -19,6 +19,7 @@ const FORM_VALIDATION_MESSAGES = {
   ],
   select: [{ type: 'required', message: 'This Field is Required' }],
   date: [{ type: 'required', message: 'This Field is Required' }],
+  text: [{ type: 'required', message: 'This Field is Required' }],
 };
 
 @Component({
@@ -35,7 +36,7 @@ const FORM_VALIDATION_MESSAGES = {
 export class InputErrorsComponent implements OnInit {
   control = input.required<AbstractControl>();
   errorMessageKeyName = input.required<
-    'displayName' | 'email' | 'password' | 'select' | 'date'
+    'displayName' | 'email' | 'password' | 'select' | 'date' | 'text'
   >();
   errorMessages!: {
     type: string;

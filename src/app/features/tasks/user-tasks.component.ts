@@ -8,7 +8,7 @@ import {
 import { CrudService, Task } from '@/app/services/crud.service';
 import { CommonModule } from '@angular/common';
 import { AddTaskComponent } from './components/modals/add-tasks.component';
-import { TaskComponent } from '@/app/user/components/task.component';
+import { TaskComponent } from '@/app/features/tasks/components/task.component';
 
 @Component({
   selector: 'dash-tasks',
@@ -16,7 +16,7 @@ import { TaskComponent } from '@/app/user/components/task.component';
   imports: [CommonModule, AddTaskComponent, TaskComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="card bg-base-200 shadow-xl w-full m-10">
+    <div class="card bg-base-200 shadow-xl">
       <div class="card-body">
         <div class="inline-block">
           <div class="flex gap-2 float-right">

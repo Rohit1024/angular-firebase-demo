@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faEnvelope,
@@ -8,19 +7,13 @@ import {
   faLock,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { InputErrorsComponent } from '@/app/components/input-errors.component';
 
 @Component({
   selector: 'user-profile-layout',
   standalone: true,
-  imports: [
-    RouterModule,
-    CommonModule,
-    FontAwesomeModule,
-    InputErrorsComponent,
-  ],
+  imports: [RouterModule, FontAwesomeModule],
   template: `
-    <div class="card bg-base-200 shadow-xl w-full m-10 p-0">
+    <div class="card bg-base-200 shadow-xl w-full">
       <div class="card-body">
         <div class="inline-block">
           <h2 class="card-title">Update Profile</h2>
@@ -31,8 +24,8 @@ import { InputErrorsComponent } from '@/app/components/input-errors.component';
             <ul class="menu space-y-1 w-full">
               <li>
                 <a
-                  class="inline-flex tems-center px-4 py-3 w-full"
-                  routerLink="/user/profile"
+                  class="inline-flex tems-center px-4 w-full"
+                  routerLink="/profile"
                   routerLinkActive="active"
                   [routerLinkActiveOptions]="{ exact: true }"
                 >
@@ -42,10 +35,10 @@ import { InputErrorsComponent } from '@/app/components/input-errors.component';
               </li>
               <li>
                 <a
-                  routerLink="/user/profile/authentication"
+                  routerLink="/profile/authentication"
                   routerLinkActive="active"
                   [routerLinkActiveOptions]="{ exact: true }"
-                  class="inline-flex tems-center px-4 py-3 w-full"
+                  class="inline-flex tems-center px-4 w-full"
                 >
                   <fa-icon [icon]="faAuth" size="lg" />
                   <span class="ml-2">Authentication</span>
@@ -53,10 +46,10 @@ import { InputErrorsComponent } from '@/app/components/input-errors.component';
               </li>
               <li>
                 <a
-                  routerLink="/user/profile/email"
+                  routerLink="/profile/email"
                   routerLinkActive="active"
                   [routerLinkActiveOptions]="{ exact: true }"
-                  class="inline-flex tems-center px-4 py-3 w-full"
+                  class="inline-flex tems-center px-4 w-full"
                 >
                   <fa-icon [icon]="faEmail" size="lg" />
                   <span class="ml-2">Email</span>
@@ -64,10 +57,10 @@ import { InputErrorsComponent } from '@/app/components/input-errors.component';
               </li>
               <li>
                 <a
-                  routerLink="/user/profile/password"
+                  routerLink="/profile/password"
                   routerLinkActive="active"
                   [routerLinkActiveOptions]="{ exact: true }"
-                  class="inline-flex tems-center px-4 py-3 w-full"
+                  class="inline-flex tems-center px-4 w-full"
                 >
                   <fa-icon [icon]="faPass" size="lg" />
                   <span class="ml-2">Password</span>

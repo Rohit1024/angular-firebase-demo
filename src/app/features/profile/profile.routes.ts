@@ -3,7 +3,7 @@ import { UserAuthComponent } from './auth.component';
 import { UserEmailComponent } from './email.component';
 import { UserPasswordComponent } from './password.component';
 import { UserDetailsComponent } from './details.component';
-import { UserProfileLayoutComponent } from '../layouts/user-profile-layout.component';
+import { UserProfileLayoutComponent } from './user-profile-layout.component';
 
 export const profile_routes: Routes = [
   {
